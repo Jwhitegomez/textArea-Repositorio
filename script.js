@@ -1,13 +1,13 @@
-const textFields = document.querySelectorAll('.textfield-input');
+const textAreas = document.querySelectorAll('.textarea-input');
 
-textFields.forEach(textField => {
-  textField.addEventListener('focus', () => {
-    textField.nextElementSibling.classList.add('active');
+textAreas.forEach(textArea => {
+  textArea.addEventListener('focus', () => {
+    textArea.nextElementSibling.classList.add('active');
   });
 
-  textField.addEventListener('blur', () => {
-    if (textField.value === '') {
-      textField.nextElementSibling.classList.remove('active');
+  textArea.addEventListener('blur', () => {
+    if (textArea.value === '') {
+      textArea.nextElementSibling.classList.remove('active');
     }
   });
 });
